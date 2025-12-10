@@ -1,0 +1,1302 @@
+/* style.css */
+
+/* === index.php (홈 화면) === */
+
+/* 1. 히어로 섹션 강조 */
+.hero-section {
+    background: linear-gradient(145deg, #fcebeb, #ffffff); /* 옅은 붉은색 그라데이션 */
+    color: #333;
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.site-branding {
+    font-size: 2.8em;
+    color: #c0392b;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-weight: 900; /* 매우 두꺼운 글꼴 */
+}
+
+.hero-section h2 {
+    font-size: 1.5em;
+    color: #008000;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.btn-primary-action {
+    display: inline-block;
+    background-color: #c0392b;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-primary-action:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+/* 2. 영화 그리드 (index.php) */
+.movie-grid {
+    padding: 0 10px;
+}
+.movie-grid h3 {
+    font-size: 1.8em;
+    color: #333;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.movie-item {
+    transition: all 0.3s;
+}
+
+.movie-item:hover {
+    transform: scale(1.03); /* 호버 시 약간 확대 */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.movie-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 0 3px;
+}
+
+.movie-release {
+    color: #777;
+    font-size: 0.9em;
+}
+
+
+/* 3. 프로모션 섹션 스타일 */
+.promo-section {
+    margin-top: 40px;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.promo-section h3 {
+    font-size: 1.6em;
+    color: #c0392b;
+    margin-bottom: 25px;
+    border-bottom: none;
+}
+
+.promo-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    /* ⭐ 수정: wrap을 허용하여 화면이 좁아지면 줄 바꿈되게 합니다. ⭐ */
+    flex-wrap: wrap; 
+}
+
+.promo-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    
+    /* ⭐ 수정: 너비를 30%로 유지하되, 카드가 너무 작아지면 안 되도록 최소 너비를 설정합니다. ⭐ */
+    width: 30%; 
+    min-width: 280px; /* ⭐ 핵심: 이 값보다 작아지면 다음 줄로 넘어갑니다. ⭐ */
+    
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.promo-card h4 {
+    color: #008000;
+    font-size: 1.1em;
+    margin-top: 0;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header & Navigation */
+header {
+    background: #c0392b; /* CVG Red Color */
+    color: #fff;
+    padding: 5px 0;
+    box-shadow: 0 4px 10px rgba(0, 50, 0, 0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #e74c3c;
+}
+
+main {
+    padding: 20px 0;
+    min-height: 70vh;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(145deg, #e0f2f1, #ffffff);
+    color: #333;
+    padding: 40px 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Movie Grid */
+.movie-grid h3 {
+    border-bottom: 2px solid #c0392b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    display: grid;
+    /* 300px 카드가 한 줄에 여러 개 배치되도록 minmax 조정 */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    /* 패딩을 0으로 설정하여 컨테이너의 패딩을 존중합니다. */
+    padding: 0;
+}
+
+.movie-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    max-width: 100%;
+    width: 100%;
+}
+
+.movie-item:hover {
+    transform: translateY(-5px);
+}
+
+.movie-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.movie-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+.movie-item h4 {
+    margin: 10px 0 5px;
+    color: #c0392b;
+}
+
+/* Forms & Buttons */
+
+/* 1. ID 입력 그룹: Flexbox 설정 */
+.register-form .input-group {
+    display: flex;             /* Flexbox 활성화 */
+    align-items: stretch;      /* 핵심: 내부 요소들의 높이를 컨테이너 높이에 맞춥니다. */
+    gap: 10px;
+    margin-bottom: 5px;        /* 아래쪽 마진을 조정하여 다음 요소와의 간격 조절 */
+}
+
+/* 2. ID 입력 필드 */
+.register-form .input-group input {
+    flex-grow: 1;              /* 남은 공간을 모두 차지 */
+    padding: 10px;             /* 내부 패딩 유지 */
+    height: auto;              /* 높이를 자동으로 설정 (stretch 적용을 위해) */
+    margin-bottom: 0;          /* 중요: 마진 제거 (높이 일치 방해 요소) */
+}
+
+/* 3. 중복 확인 버튼 */
+.register-form .input-group button {
+    width: 100px;              /* 버튼 너비 고정 */
+    margin: 0;                 /* 중요: 마진 제거 (높이 일치 방해 요소) */
+    padding: 10px;
+    font-size: 0.9em;
+    height: auto;              /* 높이를 자동으로 설정 (stretch 적용을 위해) */
+    box-sizing: border-box;    /* 패딩이 높이에 포함되도록 설정 */
+    line-height: normal;       /* 텍스트 줄 간격 초기화 */
+}
+.form-section, .search-section, .booking-section, .movie-detail {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* ⭐⭐ 검색 결과 페이지 전용: 포스터 크기 재정의 및 제한 ⭐⭐ */
+.search-section .movie-list {
+    display: flex; /* Flexbox로 전환 (Flexbox가 Grid보다 강제로 너비를 제어하기 용이함) */
+    justify-content: flex-start;
+    gap: 20px; 
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.search-section .movie-item {
+    /* ⭐ 핵심 수정 1: 포스터 카드의 너비를 픽셀 값으로 강제 고정 ⭐ */
+    width: 200px !important; 
+    max-width: 200px !important; 
+    min-width: 180px !important;
+    
+    flex-shrink: 0; /* 늘어나는 것 방지 */
+    
+    /* 포스터 카드 자체의 박스 스타일 유지 */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+/* 포스터가 한 줄 전체를 차지하지 않도록 movie-list의 패딩을 조정 */
+.movie-grid {
+    padding: 0 10px;
+}
+
+.search-section .movie-item img {
+    width: 100% ;
+    height: 300px ;
+    object-fit: cover; 
+    display: block;
+}
+
+/* 포스터가 한 줄 전체를 차지하지 않도록 movie-list의 패딩을 조정 */
+.movie-grid {
+    padding: 0 10px;
+}
+.form-section {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"], .btn-book, .like-form button {
+    background: #c0392b;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover, .btn-book:hover, .like-form button:hover {
+    background-color: #e74c3c;
+}
+
+button[disabled] {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.search-form {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.search-form button {
+    /* 기본 버튼 스타일을 따름 */
+    background: #c0392b; 
+    color: #fff;
+    
+    /* Flexbox stretch를 위해 margin-top 제거 */
+    margin-top: 0; 
+    
+    /* 높이를 input과 맞추고, 너비를 고정하여 아이콘이 깨지지 않게 함 */
+    width: 60px; 
+    height: auto; 
+    padding: 0; 
+    
+    /* 아이콘을 버튼 중앙에 위치시키기 위해 다시 Flexbox 사용 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+    margin-bottom: 0; 
+    padding: 10px; /* input과 button의 패딩을 비슷하게 유지 */
+    height: auto; /* stretch가 적용되도록 height: auto 설정 */
+}
+
+/* Movie Detail */
+.movie-info-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.detail-poster {
+    width: 250px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.info-text {
+    flex-grow: 1;
+}
+
+.info-text h2 {
+    color: #c0392b;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.like-form button {
+    background: #3498db;
+    margin-right: 15px;
+}
+
+.like-form button:hover {
+    background: #2980b9;
+}
+
+.fas.fa-heart {
+    color: #fff; 
+}
+.far.fa-heart {
+    color: #fff; 
+}
+
+/* Booking Section (좌석 선택) */
+.screen-box {
+    width: 80%;
+    margin: 20px auto;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.seat-map {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.seat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.seat-row {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.row-label {
+    width: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ddd;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 0;
+    line-height: 35px;
+}
+
+.seat.reserved {
+    background: #555;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.seat.selected {
+    background: #2ecc71; 
+    color: #fff;
+    border-color: #27ae60;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* 마이페이지/회원가입/게시판 공통 & 전용 스타일 추가 (수정 반영) */
+
+/* 회원가입 폼 전용 */
+.check-result {
+    font-size: 0.9em;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.rule-hint {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    white-space: normal;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+.strength-indicator {
+    width: 100%; 
+    
+    margin-bottom: 5px;
+}
+/* 비밀번호 안전도 바 스타일 */
+.strength-bar {
+    background: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.indicator {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    text-align: right;
+    font-size: 8px;
+    color: white;
+    line-height: 10px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+/* === 게시판 컨테이너 (board_list, board_write, board_view 공통) === */
+.board-container, .write-container, .view-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.board-container .search-results {
+    padding: 0 ; /*좌우 패딩을 좁게 설정 */
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+/* 게시판 제목 스타일 */
+.board-title h2 {
+    color: #c0392b;
+    text-align: left;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 글쓰기 버튼 스타일 (board_list) */
+.write-btn {
+    display: inline-block;
+    background-color: #c0392b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+.write-btn:hover {
+    background-color: #e74c3c;
+}
+
+/* 게시판 목록 테이블 스타일 */
+.board-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+.board-container th, .board-container td {
+    padding: 12px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.board-container th {
+    background-color: #f7f7f7;
+    color: #555;
+    font-weight: bold;
+}
+
+.board-container td a {
+    color: #3498db;
+    text-decoration: none;
+}
+.board-container td a:hover {
+    text-decoration: underline;
+}
+
+.board-container tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* 글쓰기 폼 전용 (input/textarea) */
+.write-container input[type="text"], 
+.write-container textarea, /* 이 부분에 textarea가 추가되어야 합니다! */
+.write-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 패딩과 보더가 너비를 초과하지 않도록 함 */
+    background-color: #fff;
+}
+
+.write-container textarea {
+    min-height: 200px; 
+    resize: vertical; 
+}
+
+/* 저장 버튼 스타일 (board_write) */
+.submit-btn {
+    background-color: #c0392b;
+    color: #fff;
+    padding: 14px 20px; 
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;         
+    display: block;      
+    margin-top: 30px;    
+}
+
+.submit-btn:hover {
+    background-color: #e74c3c;
+}
+
+
+/* 1. 마이페이지 헤더 (가장 상단 환영 메시지 박스) */
+.mypage-header {
+    background-color: #ffffff; /* 흰색 배경으로 통일 */
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 그림자를 강조하여 박스 형태 강조 */
+    border: 1px solid #eee; /* 얇은 테두리로 섹션 구분 */
+}
+
+.mypage-header h2 {
+    color: #333; /* 제목 색상을 어둡게 하여 선명하게 */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.mypage-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 2. 하위 섹션 (예매 내역, 찜한 영화) */
+.mypage-section {
+    background: #ffffff; /* 배경 흰색으로 통일 */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    border: 1px solid #eee; /* 얇은 테두리로 구분 */
+}
+
+.mypage-section h3 {
+    /* 섹션 제목 아래 붉은색 줄로 강조 */
+    border-bottom: 3px solid #c0392b; 
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    color: #333; /* 제목은 어둡게 */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* === 예매 내역 테이블 스타일 (가독성 보강) === */
+.booking-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.booking-history th, .booking-history td {
+    padding: 14px 10px; /* 세로 패딩 증가 */
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.booking-history thead th {
+    background-color: #f7f7f7; /* 헤더 배경색 연하게 */
+    color: #555;
+    font-weight: bold;
+    border-top: 2px solid #ddd;
+}
+
+.booking-history tbody tr:hover {
+    background-color: #fafafa;
+}
+
+/* 예매 내역이 없을 때의 링크 스타일 */
+.booking-history p a {
+    color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* === 찜한 영화 목록 스타일 === */
+
+/* 좋아요를 누른 영화가 없을 때의 링크 스타일 */
+.mypage-section .movie-list p a {
+    color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 예매 내역 테이블 스타일 */
+.booking-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.booking-history th, .booking-history td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.booking-history th {
+    background-color: #e7e7e7;
+    color: #333;
+    font-weight: bold;
+}
+
+.booking-history tbody tr:hover {
+    background-color: #fafafa;
+}
+
+/* 예매 내역 링크 스타일 */
+.booking-history td a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+.booking-history td a:hover {
+    text-decoration: underline;
+}
+
+/* 예매 내역이 없을 때의 링크 스타일 */
+.booking-history p a {
+    color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 좋아요 영화 목록 스타일 */
+.movie-list-small {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+.movie-list-small .movie-item {
+    /* ⭐ 핵심 수정 3: 개별 항목의 크기를 명시적으로 제한 ⭐ */
+    width: 200px; 
+    max-width: 200px;
+    flex-shrink: 0; 
+}
+.movie-list-small .movie-item img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* === 글 보기 (board_view.php) 상세 스타일 === */
+.view-container table {
+    border: 1px solid #ddd;
+}
+.view-container th {
+    width: 100px;
+    background-color: #f7f7f7;
+    text-align: left;
+    color: #333;
+}
+.view-container td {
+    text-align: left;
+    border-left: none;
+    border-right: none;
+}
+.view-container button {
+    color: #c0392b; 
+}
+.view-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 1px solid #ddd; /* 테이블 외곽선 추가 */
+}
+
+/* 4. 테이블 헤더와 내용 (글쓴이, 등록일 등) */
+.view-container th, .view-container td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #eee; /* 모든 셀에 구분선 */
+}
+
+.view-container th {
+    width: 100px; 
+    background-color: #f7f7f7; /* 항목 이름 배경색 */
+    color: #555; 
+    font-weight: bold;
+}
+
+/* 5. 공감하기 버튼 배치 (오른쪽 중앙 하단 배치) */
+.view-container form {
+    /* 공감하기 폼을 오른쪽 정렬합니다. */
+    text-align: right; 
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.view-container button {
+    /* 공감 버튼의 기본 스타일을 재정의하여 깔끔하게 만듭니다. */
+    background: none; 
+    border: 1px solid #c0392b; /* 테두리만 붉게 */
+    color: #c0392b; 
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+.view-container button:hover {
+    background-color: #fcebeb; /* 호버 시 연한 붉은 배경 */
+}
+
+
+/* 6. 하단 버튼 그룹 배치 (목록/삭제) */
+.btn-group {
+    text-align: left; /* 하단 버튼 그룹을 왼쪽으로 정렬 */
+    margin-top: 30px;
+    border-top: 1px solid #eee; /* 상단 구분선 */
+    padding-top: 20px;
+}
+
+/* "목록으로" 링크 스타일 */
+.btn-group a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 15px;
+    background-color: #c0392b; /* 버튼 배경 붉은색 */
+    color: #fff; 
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* "목록으로" 링크 호버 */
+.btn-group a:hover {
+    background-color: #e74c3c;
+}
+/* "삭제" 버튼 스타일 (링크로 구현 가정) */
+.btn-group a[href*='delete'] {
+    background-color: #777; /* 삭제 버튼은 회색 */
+}
+.btn-group a[href*='delete']:hover {
+    background-color: #555;
+}
+
+/* (이전 코드에서 누락된 스타일 복구) */
+.write-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+.write-container input[type="text"], 
+.write-container textarea {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.view-container h2 {
+    color: #333;
+    text-align: left;
+    border-bottom: 2px solid #c0392b;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+/* === Movie List Page (movie_list.php) 전용 스타일 === */
+
+.movie-list-section {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.movie-list-section .section-title {
+    color: #c0392b;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* 목록 페이지 전용 그리드 설정 (항목당 너비를 더 확보) */
+.movie-list-full {
+   display: grid;
+    /* ⭐ 핵심 수정: 항목당 최소 너비를 200px로 낮추고, 1fr을 사용하여 남는 공간을 균등 분배합니다. ⭐ */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    
+    /* ⭐ 추가: 컨테이너의 패딩을 고려하여 overflow를 방지합니다. ⭐ */
+    padding: 0 10px;
+}
+
+/* 목록 페이지의 각 항목 디자인 */
+.movie-item-full {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    
+    /* ⭐ 중요: 카드 최소 너비를 100%로 설정하여 찌그러짐 방지 ⭐ */
+    min-width: 100%;
+}
+
+.movie-item-full img {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info-box {
+    padding: 15px;
+}
+
+.movie-info-box .btn-book {
+    /* 배치 관련 스타일은 유지 */
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+    
+    /* ⭐ 핵심 스타일 재적용: 일반 버튼과 동일하게 ⭐ */
+    background: #c0392b; /* 붉은색 배경 */
+    color: #fff;        /* 흰색 글씨 */
+    padding: 10px;
+    border-radius: 4px; /* 둥근 모서리 */
+    transition: background-color 0.3s;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.movie-info-box .btn-book:hover {
+    background-color: #e74c3c;
+}
+
+.movie-info-box h4 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.movie-info-box p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.movie-info-box .btn-book {
+    display: block; /* 버튼을 너비 전체로 확장 */
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/* === index.php (홈 화면) 디자인 보강 === */
+
+/* 1. 히어로 섹션 강조 */
+.hero-section {
+    background: linear-gradient(145deg, #fcebeb, #ffffff); /* 옅은 붉은색 그라데이션 */
+    color: #333;
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.site-branding {
+    font-size: 2.8em;
+    color: #c0392b;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-weight: 900; /* 매우 두꺼운 글꼴 */
+}
+
+.btn-primary-action {
+    display: inline-block;
+    background-color: #c0392b;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-primary-action:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+/* 2. 영화 그리드 (index.php) */
+.movie-grid {
+    padding: 0 10px;
+}
+.movie-grid h3 {
+    font-size: 1.8em;
+    color: #333;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.movie-item {
+    transition: all 0.3s;
+}
+
+.movie-item:hover {
+    transform: scale(1.03); /* 호버 시 약간 확대 */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.movie-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 0 3px;
+}
+
+.movie-release {
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* 프로모션 섹션 스타일 */
+.promo-section {
+    margin-top: 40px;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.promo-section h3 {
+    font-size: 1.6em;
+    color: #c0392b;
+    margin-bottom: 25px;
+    border-bottom: none;
+}
+
+.promo-grid {
+    display: block; /* Flexbox 대신 블록으로 만들어 각 카드를 수직으로 쌓습니다. */
+    max-width: 600px; /* 카드가 너무 넓게 퍼지지 않도록 최대 너비 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
+    gap: 0; /* Flexbox gap 제거 */
+}
+
+.promo-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; 
+    min-width: 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+    
+    /* 세로 간격 추가 */
+    margin-bottom: 15px; 
+}
+
+.promo-card h4 {
+    color: #008000;
+    font-size: 1.1em;
+    margin-top: 0;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+/* 1. 검색 섹션 컨테이너 */
+.search-results {
+    text-align: left; /* 내부 콘텐츠 중앙 정렬 */
+    /* padding-top: 20px; */
+}
+
+.search-section > h3, .search-results > h3 { 
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left; 
+    padding-left: 0; 
+}
+
+/* 2. 검색 결과 메시지 스타일 */
+/* search.php에서 <p>검색어를 입력해 주세요.</p>에 적용될 스타일 */
+.search-results p {
+    font-size: 1.1em;
+    color: #777;
+    margin-top: 40px; /* 검색 결과 메시지를 아래로 분리 */
+    margin-bottom: 20px;
+    text-align: center; 
+    padding-left: 10px; /* 패딩 조정 */
+}
+/* 검색 결과를 담는 섹션 (board-container의 패딩을 따름) */
+.board-container .search-content, 
+.board-container .search-results {
+    /* 내부 섹션의 상하 마진/패딩은 0으로 설정하여 컨테이너 패딩에 의존 */
+    padding: 0; 
+    margin: 0;
+}
+
+/* 검색 결과 텍스트 정렬 */
+.search-results > h3, 
+.search-results > p { 
+    /* ... (글꼴 크기/색상 유지) ... */
+    
+    /* ⭐ 핵심 수정: 텍스트를 왼쪽으로 붙이고 패딩/마진 제거 ⭐ */
+    text-align: left; 
+    padding-left: 0 !important; 
+    margin-left: 0 !important; 
+    margin-right: 0 !important;
+}
+
+/* 검색 바의 제목 (🔍 영화 검색) 아래 마진 조정 */
+.search-content h2 {
+    /* (선택 사항) 검색 바와 결과 텍스트 사이의 간격 균일화 */
+    margin-bottom: 20px; 
+}
+/* 쿠폰함 게시반 */
+.write-btn[style*='3498db'] { 
+    background-color: #2ecc71 !important;
+}
+.write-btn[style*='3498db']:hover {
+    background-color: #2ecc71 !important;
+}
+.write-btn[style*='555'] { /* 회색 버튼 스타일 */
+    background-color: #555 !important;
+}
+.write-btn[style*='555']:hover {
+    background-color: #777 !important;
+}
+
+/*  관리자 모드 전용 스타일  */
+
+/* 1. 헤더 배경색 변경 */
+body.admin-mode header {
+    background: #33495e; /* 관리자 전용 테마 색상 (짙은 파랑/회색) */
+}
+
+/* 2. 관리자 모드 로고 및 링크 강조 */
+body.admin-mode header .logo a {
+    color: #f1f1f1;
+}
+
+body.admin-mode nav ul li a:hover {
+    background-color: #4b6683; /* 호버 시 색상 조정 */
+}
+
+/* === 관리자 회원 목록 스타일 (.admin-section) === */
+
+.admin-section {
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.admin-section h2 {
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.admin-section .table-container { 
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+/* 1. 테이블 기본 스타일 */
+.admin-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.95em;
+    border: none; /* 테이블 외곽선 제거 */
+}
+
+/* 2. 테이블 헤더 스타일 (쿠폰 목록처럼 깔끔하게) */
+.admin-section table th {
+    background-color: #f7f7f7; /* 헤더 배경색 연하게 */
+    color: #555;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #ddd; /* 헤더 아래 선 추가 */
+}
+
+/* 3. 테이블 데이터 셀 스타일 */
+.admin-section table td {
+    padding: 12px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #eee; /* 데이터 구분선 */
+    vertical-align: middle;
+}
+
+/* 4. 마우스 오버 스타일 */
+.admin-section table tbody tr:hover {
+    background-color: #fafafa;
+}
+
+/* style.css에 추가 */
+.movie-rating-summary {
+    margin: 20px 0;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+.rating-display .stars {
+    font-size: 1.5em;
+    color: #f39c12; /* 체크된 별 색상 (골드) */
+    display: inline-block;
+    margin-right: 10px;
+}
+.rating-display .stars .unchecked {
+    color: #ccc;
+}
+.rating-display .score {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+.rating-display .count {
+    font-size: 0.9em;
+    color: #777;
+    margin-left: 10px;
+}
